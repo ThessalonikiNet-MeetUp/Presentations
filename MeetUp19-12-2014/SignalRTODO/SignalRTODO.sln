@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRTODO", "SignalRTODO\SignalRTODO.csproj", "{9C2FA972-B1A8-4055-A7FE-B549983C149A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoProcess", "TodoProcess\TodoProcess.csproj", "{FF5AD7B5-8B34-4384-8243-19F52F8B01AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C2FA972-B1A8-4055-A7FE-B549983C149A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2FA972-B1A8-4055-A7FE-B549983C149A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2FA972-B1A8-4055-A7FE-B549983C149A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2FA972-B1A8-4055-A7FE-B549983C149A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5AD7B5-8B34-4384-8243-19F52F8B01AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5AD7B5-8B34-4384-8243-19F52F8B01AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5AD7B5-8B34-4384-8243-19F52F8B01AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5AD7B5-8B34-4384-8243-19F52F8B01AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
