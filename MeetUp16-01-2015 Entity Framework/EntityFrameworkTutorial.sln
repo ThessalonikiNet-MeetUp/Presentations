@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTutorial", "EntityFrameworkTutorial.csproj", "{064F1553-E5F9-4A17-85C7-B972392E1367}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTutorialInheritance", "EntityFrameworkTutorialInheritance\EntityFrameworkTutorialInheritance.csproj", "{D573BA01-B7C5-4881-9781-DC69625C1B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTutorial", "EntityFrameworkTutorial\EntityFrameworkTutorial.csproj", "{064F1553-E5F9-4A17-85C7-B972392E1367}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D573BA01-B7C5-4881-9781-DC69625C1B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D573BA01-B7C5-4881-9781-DC69625C1B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D573BA01-B7C5-4881-9781-DC69625C1B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D573BA01-B7C5-4881-9781-DC69625C1B37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{064F1553-E5F9-4A17-85C7-B972392E1367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{064F1553-E5F9-4A17-85C7-B972392E1367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{064F1553-E5F9-4A17-85C7-B972392E1367}.Release|Any CPU.ActiveCfg = Release|Any CPU
