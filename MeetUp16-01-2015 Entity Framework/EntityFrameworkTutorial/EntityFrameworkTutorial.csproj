@@ -59,6 +59,7 @@
     <Compile Include="Fuel.cs" />
     <Compile Include="ICarCategoriesRepository.cs" />
     <Compile Include="ICarsRepository.cs" />
+    <Compile Include="PartBrand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

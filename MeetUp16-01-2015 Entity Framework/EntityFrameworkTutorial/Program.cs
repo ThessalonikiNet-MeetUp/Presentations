@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using EntityFrameworkTutorial.Ado;
 using EntityFrameworkTutorial.EntityFramework;
@@ -61,7 +62,23 @@ namespace EntityFrameworkTutorial
                 CategoryId = firstCarCategory.Id,
                 Fuel = Fuel.Petroleum,
                 NumberOdSeats = 2,
-                NumberOfWheels = 4
+                NumberOfWheels = 4,
+                EngineDetails = new EngineDetails
+                {
+                    EngineSize = 1800,
+                    NumberOfGears = 6
+                },
+                PartBrands = new Collection<PartBrand>
+                {
+                    new PartBrand
+                    {
+                        Name = "Mercedes"
+                    },
+                    new PartBrand
+                    {
+                        Name = "BMW"
+                    }
+                }
             });
 
             var firstCategory = carCategoriesRepository.GetCategoryById(firstCarCategory.Id);

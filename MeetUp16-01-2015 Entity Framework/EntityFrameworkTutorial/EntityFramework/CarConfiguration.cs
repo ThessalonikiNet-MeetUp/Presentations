@@ -11,6 +11,13 @@ namespace EntityFrameworkTutorial.EntityFramework
                 .WithMany(cc => cc.Cars)
                 .HasForeignKey(c => c.CategoryId)
                 .WillCascadeOnDelete(true);
+
+            HasMany(c => c.PartBrands).WithMany(pb => pb.Cars).Map(ca =>
+            {
+                ca.MapLeftKey("CarId");
+                ca.MapRightKey("PartBrandId");
+                ca.ToTable("CarsPartBrands");
+            });
         }
     }
 }

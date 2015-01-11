@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EntityFrameworkTutorial
 {
@@ -7,6 +8,10 @@ namespace EntityFrameworkTutorial
     /// </summary>
     public class Car
     {
+        public Car()
+        {
+            PartBrands = new HashSet<PartBrand>();
+        }
         public int Id { get; set; }
         public int NumberOfWheels { get; set; }
         public Fuel Fuel { get; set; }
@@ -14,5 +19,6 @@ namespace EntityFrameworkTutorial
         public int CategoryId { get; set; }
         public virtual CarCategory Category { get; set; }
         public virtual EngineDetails EngineDetails { get; set; }
+        public virtual ICollection<PartBrand> PartBrands { get; set; }
     }
 }
