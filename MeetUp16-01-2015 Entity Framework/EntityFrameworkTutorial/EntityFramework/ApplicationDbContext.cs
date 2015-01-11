@@ -6,7 +6,7 @@ using System.Data.Entity.Infrastructure.Annotations;
 namespace EntityFrameworkTutorial.EntityFramework
 {
     /// <summary>
-    /// Context class responsible for data access based on table per concrete type inheritance mapping.
+    /// Context class responsible for data access.
     /// </summary>
     public class ApplicationDbContext : DbContext
     {

@@ -9,7 +9,7 @@ namespace EntityFrameworkTutorialInheritance
     {
         public int NumberOdSeats { get; set; }
 
-        public int CategoryId { get; set; }
+        public string DrivingPlates { get; set; }
 
     }
 }
