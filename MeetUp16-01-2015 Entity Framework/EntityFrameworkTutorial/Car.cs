@@ -11,9 +11,8 @@ namespace EntityFrameworkTutorial
         public int NumberOfWheels { get; set; }
         public Fuel Fuel { get; set; }
         public int NumberOdSeats { get; set; }
-
         public int CategoryId { get; set; }
-
         public virtual CarCategory Category { get; set; }
+        public virtual EngineDetails EngineDetails { get; set; }
     }
 }

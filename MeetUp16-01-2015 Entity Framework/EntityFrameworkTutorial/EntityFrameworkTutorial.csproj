@@ -49,11 +49,13 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="Ado\AdoCarCategoriesRepository.cs" />
+    <Compile Include="EngineDetails.cs" />
     <Compile Include="EntityFramework\CarConfiguration.cs" />
     <Compile Include="EntityFramework\CarsRepository.cs" />
     <Compile Include="EntityFramework\CarCategoriesRepository.cs" />
     <Compile Include="CarCategory.cs" />
     <Compile Include="EntityFramework\ApplicationDbContext.cs" />
+    <Compile Include="EntityFramework\EngineDetailsConfiguration.cs" />
     <Compile Include="Fuel.cs" />
     <Compile Include="ICarCategoriesRepository.cs" />
     <Compile Include="ICarsRepository.cs" />

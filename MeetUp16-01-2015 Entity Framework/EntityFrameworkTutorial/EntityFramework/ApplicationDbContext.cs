@@ -29,6 +29,7 @@ namespace EntityFrameworkTutorial.EntityFramework
                     new IndexAnnotation(new IndexAttribute("UN_CarCategory_Code") { IsUnique = true }));
 
             modelBuilder.Configurations.Add(new CarConfiguration());
+            modelBuilder.Configurations.Add(new EngineDetailsConfiguration());
         }
     }
 }
