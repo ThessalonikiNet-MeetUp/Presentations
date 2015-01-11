@@ -27,6 +27,8 @@ namespace EntityFrameworkTutorial.EntityFramework
                 .HasMaxLength(50)
                 .HasColumnAnnotation(IndexAnnotation.AnnotationName,
                     new IndexAnnotation(new IndexAttribute("UN_CarCategory_Code") { IsUnique = true }));
+
+            modelBuilder.Configurations.Add(new CarConfiguration());
         }
     }
 }

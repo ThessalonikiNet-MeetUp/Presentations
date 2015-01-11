@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using EntityFrameworkTutorial.Ado;
 using EntityFrameworkTutorial.EntityFramework;
 
@@ -10,9 +7,10 @@ namespace EntityFrameworkTutorial
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             CarCatetoriesManagement();
+            CarsManagement();
         }
 
         private static void CarCatetoriesManagement()
@@ -34,8 +32,7 @@ namespace EntityFrameworkTutorial
                 Description = "sports car"
             });
 
-            var allCategories = carCategoriesRepository.GetAllCategories();
-            allCategories.ToList();
+            var allCategories = carCategoriesRepository.GetAllCategories().ToList();
 
             var firstExistingCategory = carCategoriesRepository.GetCategoryById(firstCategoryId);
             firstExistingCategory.Code = "suv changed";
@@ -43,5 +40,33 @@ namespace EntityFrameworkTutorial
 
             carCategoriesRepository.DeleteCarCategory(firstCategoryId);
         }
+
+        private static void CarsManagement()
+        {
+            ICarCategoriesRepository carCategoriesRepository = new CarCategoriesRepository();
+            var firstCarCategory = carCategoriesRepository.GetAllCategories().First();
+
+            ICarsRepository carsRepository = new CarsRepository();
+
+            var firstCarId = carsRepository.InsertCar(new Car
+            {
+                CategoryId = firstCarCategory.Id,
+                Fuel = Fuel.Petrol,
+                NumberOdSeats = 5,
+                NumberOfWheels = 4
+            });
+
+            carsRepository.InsertCar(new Car
+            {
+                CategoryId = firstCarCategory.Id,
+                Fuel = Fuel.Petroleum,
+                NumberOdSeats = 2,
+                NumberOfWheels = 4
+            });
+
+            var firstCategory = carCategoriesRepository.GetCategoryById(firstCarCategory.Id);
+
+        }
+
     }
 }
