@@ -1,7 +1,6 @@
-Presentation:
-Entity Framework: From novice to advanced
+#### Entity Framework: From novice to advanced
 
-Some interesting links regarding Entity Framework
+Some interesting links regarding Entity Framework:
 
 Starting point and official blog of [Entity Framework][ef]
 
