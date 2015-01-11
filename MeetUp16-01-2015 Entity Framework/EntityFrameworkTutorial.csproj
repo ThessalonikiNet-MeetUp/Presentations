@@ -49,7 +49,9 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="Ado\CarCategoriesRepository.cs" />
+    <Compile Include="EntityFramework\CarCategoriesRepository.cs" />
     <Compile Include="CarCategory.cs" />
+    <Compile Include="EntityFramework\TablePerConcreteTypeContext.cs" />
     <Compile Include="Fuel.cs" />
     <Compile Include="ICarCategoriesRepository.cs" />
     <Compile Include="Motorbike.cs" />

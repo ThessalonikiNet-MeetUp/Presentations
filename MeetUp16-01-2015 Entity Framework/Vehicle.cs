@@ -5,7 +5,7 @@ namespace EntityFrameworkTutorial
     /// <summary>
     /// A base class for all vehicles
     /// </summary>
-    public class Vehicle 
+    public abstract class Vehicle 
     {
         public int Id { get; set; }
 
