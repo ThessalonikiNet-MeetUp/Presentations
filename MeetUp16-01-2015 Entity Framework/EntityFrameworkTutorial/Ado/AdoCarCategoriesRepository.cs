@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 
 namespace EntityFrameworkTutorial.Ado
 {
@@ -14,7 +13,7 @@ namespace EntityFrameworkTutorial.Ado
             get { return ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString; }
         }
 
-        public IQueryable<CarCategory> GetAllCategories()
+        public IEnumerable<CarCategory> GetAllCategories()
         {
             var result = new List<CarCategory>();
             using (var connection = new SqlConnection(ConnectionString))
@@ -35,7 +34,7 @@ namespace EntityFrameworkTutorial.Ado
                     }
                 }
             }
-            return result.AsQueryable();
+            return result;
         }
 
         public CarCategory GetCategoryById(int id)

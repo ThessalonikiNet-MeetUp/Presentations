@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -6,11 +7,11 @@ namespace EntityFrameworkTutorial.EntityFramework
 {
     class CarsRepository : ICarsRepository
     {
-        public IQueryable<Car> GetAllCars()
+        public IEnumerable<Car> GetAllCars()
         {
             using (var context = new ApplicationDbContext())
             {
-                return context.Cars;
+                return context.Cars.ToList();
             }
         }
 

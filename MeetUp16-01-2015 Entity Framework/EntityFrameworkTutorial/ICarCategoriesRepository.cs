@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace EntityFrameworkTutorial
 {
@@ -8,7 +8,7 @@ namespace EntityFrameworkTutorial
     /// </summary>
     public interface ICarCategoriesRepository
     {
-        IQueryable<CarCategory> GetAllCategories();
+        IEnumerable<CarCategory> GetAllCategories();
 
         CarCategory GetCategoryById(int id);
 

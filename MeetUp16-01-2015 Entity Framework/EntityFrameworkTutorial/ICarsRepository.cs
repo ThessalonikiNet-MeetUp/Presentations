@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityFrameworkTutorial
 {
+    /// <summary>
+    /// Repository for managing data access regarding <see cref="Car"/>s
+    /// </summary>
     public interface ICarsRepository
     {
-        IQueryable<Car> GetAllCars();
+        IEnumerable<Car> GetAllCars();
 
         Car GetCarById(int id);
 

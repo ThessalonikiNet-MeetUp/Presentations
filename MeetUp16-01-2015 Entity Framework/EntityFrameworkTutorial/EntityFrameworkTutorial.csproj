@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="Ado\CarCategoriesRepository.cs" />
+    <Compile Include="Ado\AdoCarCategoriesRepository.cs" />
     <Compile Include="EntityFramework\CarsRepository.cs" />
     <Compile Include="EntityFramework\CarCategoriesRepository.cs" />
     <Compile Include="CarCategory.cs" />
