@@ -11,9 +11,7 @@ namespace EntityFrameworkTutorial
     {
         static void Main(string[] args)
         {
-            ICarCategoriesRepository carCategoriesRepository;
-
-            carCategoriesRepository = new AdoCarCategoriesRepository();
+            ICarCategoriesRepository carCategoriesRepository = new AdoCarCategoriesRepository();
 
 
             var id =

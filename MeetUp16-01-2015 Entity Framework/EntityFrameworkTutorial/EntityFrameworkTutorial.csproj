@@ -51,14 +51,11 @@
     <Compile Include="Ado\CarCategoriesRepository.cs" />
     <Compile Include="EntityFramework\CarCategoriesRepository.cs" />
     <Compile Include="CarCategory.cs" />
-    <Compile Include="EntityFramework\TablePerConcreteTypeContext.cs" />
+    <Compile Include="EntityFramework\ApplicationDbContext.cs" />
     <Compile Include="Fuel.cs" />
     <Compile Include="ICarCategoriesRepository.cs" />
-    <Compile Include="Motorbike.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Truck.cs" />
-    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

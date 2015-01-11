@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EntityFrameworkTutorial
+namespace EntityFrameworkTutorialInheritance
 {
     /// <summary>
     /// Class for trucks

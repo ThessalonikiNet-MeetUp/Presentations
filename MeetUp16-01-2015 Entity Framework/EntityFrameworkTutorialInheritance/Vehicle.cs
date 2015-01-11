@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EntityFrameworkTutorial
+namespace EntityFrameworkTutorialInheritance
 {
     /// <summary>
     /// A base class for all vehicles

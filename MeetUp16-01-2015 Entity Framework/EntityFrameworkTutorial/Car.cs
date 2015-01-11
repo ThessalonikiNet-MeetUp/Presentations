@@ -5,8 +5,11 @@ namespace EntityFrameworkTutorial
     /// <summary>
     /// Class for cars
     /// </summary>
-    public class Car : Vehicle
+    public class Car
     {
+        public int Id { get; set; }
+        public int NumberOfWheels { get; set; }
+        public Fuel Fuel { get; set; }
         public int NumberOdSeats { get; set; }
 
         public int CategoryId { get; set; }

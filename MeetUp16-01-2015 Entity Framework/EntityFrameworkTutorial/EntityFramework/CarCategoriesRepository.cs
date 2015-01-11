@@ -8,7 +8,7 @@ namespace EntityFrameworkTutorial.EntityFramework
     {
         public IQueryable<CarCategory> GetAllCategories()
         {
-            using (var context = new TablePerConcreteTypeContext())
+            using (var context = new ApplicationDbContext())
             {
                 return context.CarCategories;
             }
@@ -16,7 +16,7 @@ namespace EntityFrameworkTutorial.EntityFramework
 
         public CarCategory GetCategoryById(int id)
         {
-            using (var context = new TablePerConcreteTypeContext())
+            using (var context = new ApplicationDbContext())
             {
                 return context.CarCategories.Find(id);
             }
@@ -24,7 +24,7 @@ namespace EntityFrameworkTutorial.EntityFramework
 
         public int InsertCarCategory(CarCategory category)
         {
-            using (var context = new TablePerConcreteTypeContext())
+            using (var context = new ApplicationDbContext())
             {
                 context.CarCategories.Add(category);
                 context.SaveChanges();
@@ -34,7 +34,7 @@ namespace EntityFrameworkTutorial.EntityFramework
 
         public void UpdateCarCategory(CarCategory category)
         {
-            using (var context = new TablePerConcreteTypeContext())
+            using (var context = new ApplicationDbContext())
             {
                 if (context.CarCategories.Count(cc => cc.Id == category.Id) > 0)
                 {
@@ -46,7 +46,7 @@ namespace EntityFrameworkTutorial.EntityFramework
 
         public void DeleteCarCategory(int id)
         {
-            using (var context = new TablePerConcreteTypeContext())
+            using (var context = new ApplicationDbContext())
             {
                 var categoryToDelete = context.CarCategories.Find(id);
                 if (categoryToDelete!= null)
