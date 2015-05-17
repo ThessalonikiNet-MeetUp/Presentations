@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ApplicationName">SunshineApp</string>
+    <string name="ActionSettings">Settings</string>
+    <string name="ActionMap">Map Location</string>
+</resources>
