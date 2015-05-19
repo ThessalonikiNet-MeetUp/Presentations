@@ -20,6 +20,19 @@ namespace SunshineX
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            // Create a new fragment and a transaction.
+            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+            if (bundle == null)
+            {
+                ForecastFragment aDifferentDetailsFrag = new ForecastFragment();
+
+                // The fragment will have the ID of Resource.Id.fragment_container.
+                fragmentTx.Add(Resource.Id.container, aDifferentDetailsFrag);
+
+                // Commit the transaction.
+                fragmentTx.Commit();
+            }
+
             // Get our button from the layout resource,
             // and attach an event to it
             // Button button = FindViewById<Button>(Resource.Id.MyButton);
