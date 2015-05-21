@@ -8,7 +8,11 @@ The main idea of this project is based on Sunshine project,
 a companion Android app for the Udacity course Developing Android Apps: Android Fundamentals.
 ( https://github.com/udacity/Sunshine )
 
-Syllabus 
+Presentation
+--------------------------------------------------
+http://slides.com/ziaziosconstantinos/mobile-apps-with-c#/
+
+Topics 
 --------------------------------------------------
 SunshineX is basic a weather app, and given the shor time will cover the basics.
 - Navigation
