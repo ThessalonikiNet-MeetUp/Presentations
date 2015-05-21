@@ -5,6 +5,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Preferences;
+using Android.Util;
 
 namespace SunshineX
 {
@@ -44,21 +46,69 @@ namespace SunshineX
         {
             MenuInflater.Inflate(Resource.Menu.main, menu);
 
-            var shareMenuItem = menu.FindItem(Resource.Id.action_settings);
+           // var shareMenuItem = menu.FindItem(Resource.Id.action_settings);
             //var shareActionProvider =
             //   (ShareActionProvider)shareMenuItem.ActionProvider;
             //shareActionProvider.SetShareIntent(CreateIntent());
             return true;
         }
 
-        Intent CreateIntent()
+        public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            var sendPictureIntent = new Intent(Intent.ActionSend);
-            //sendPictureIntent.SetType("image/*");
-            //var uri = Android.Net.Uri.FromFile(GetFileStreamPath("monkey.png"));
-            //sendPictureIntent.PutExtra(Intent.ExtraStream, uri);
-            return sendPictureIntent;
+            switch (item.ItemId)
+            {
+                case Resource.Id.action_settings:
+                    //do something
+                    // Check what fragment is shown, replace if needed.
+                    Settings();
+                    return true;
+
+                case Resource.Id.action_map :
+                    OpenPreferredLocationInMap();
+
+                    return true;
+
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
+        private void Settings()
+        {
+            var intent = new Intent(this, typeof(Settings));
+    
+                StartActivity(intent);
+        }
+
+        private void OpenPreferredLocationInMap()
+        {
+            ISharedPreferences sharedPrefs =
+                PreferenceManager.GetDefaultSharedPreferences(this);
+            string location = sharedPrefs.GetString(
+                "city",
+                "Thessaloniki");
+
+            // Using the URI scheme for showing a location found on a map. This super-handy
+            // intent can is detailed in the "Common Intents" page of Android's developer site:
+            // http://developer.android.com/guide/components/intents-common.html#Maps
+
+            Android.Net.Uri geoLocation = Android.Net.Uri.Parse("geo:0,0?").BuildUpon()
+                .AppendQueryParameter("q", location)
+                .Build();
+
+            Intent intent = new Intent(Intent.ActionView);
+            intent.SetData(geoLocation);
+
+            if (intent.ResolveActivity(PackageManager) != null)
+            {
+                StartActivity(intent);
+            }
+            else
+            {
+                Log.Debug("SunshineX", "Couldn't call " + location + ", no receiving apps installed!");
+            }
         }
     }
+
+      
 }
 
