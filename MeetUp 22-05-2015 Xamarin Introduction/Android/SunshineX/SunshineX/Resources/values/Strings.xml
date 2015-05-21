@@ -3,4 +3,5 @@
     <string name="ApplicationName">SunshineApp</string>
     <string name="ActionSettings">Settings</string>
     <string name="ActionMap">Map Location</string>
+  <string name="action_refresh">Refresh</string>
 </resources>

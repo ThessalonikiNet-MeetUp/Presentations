@@ -79,11 +79,14 @@ namespace SunshineX
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070004
-			public const int action_map = 2131165188;
+			// aapt resource value: 0x7f070005
+			public const int action_map = 2131165189;
 			
 			// aapt resource value: 0x7f070003
-			public const int action_settings = 2131165187;
+			public const int action_refresh = 2131165187;
+			
+			// aapt resource value: 0x7f070004
+			public const int action_settings = 2131165188;
 			
 			// aapt resource value: 0x7f070001
 			public const int container = 2131165185;
@@ -130,7 +133,10 @@ namespace SunshineX
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int main = 2131099648;
+			public const int forecastmenu = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int main = 2131099649;
 			
 			static Menu()
 			{
@@ -153,6 +159,9 @@ namespace SunshineX
 			
 			// aapt resource value: 0x7f050000
 			public const int ApplicationName = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int action_refresh = 2131034115;
 			
 			static String()
 			{

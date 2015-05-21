@@ -19,7 +19,7 @@ namespace SunshineX
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+           
             // Create a new fragment and a transaction.
             FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
             if (bundle == null)
