@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ReactServerSide.Models;
 
 namespace ReactServerSide.Controllers
 {
@@ -10,21 +11,39 @@ namespace ReactServerSide.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var model = new IndexViewModel {
+                Comments = new List<Comment>
+                {
+                    new Comment
+                    {
+                        Text = "This is the first comment",
+                        Author = new Author
+                        {
+                            Name = "Daniel Lo Nigro",
+                            GithubUsername = "Daniel15"
+                        }
+                    },
+                    new Comment
+                    {
+                        Text = "This is the second comment",
+                        Author = new Author
+                        {
+                            Name = "Christopher Chedeau",
+                            GithubUsername = "vjeux"
+                        }
+                    },
+                    new Comment
+                    {
+                        Text = "This is the third comment",
+                        Author = new Author
+                        {
+                            Name = "Christoph Pojer",
+                            GithubUsername = "cpojer"
+                        }
+                    }
+                }
+            };
+            return View(model);
         }
     }
 }
