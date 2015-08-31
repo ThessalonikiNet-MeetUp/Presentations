@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+      var comments = [
+        {
+          author: {
+            name: "Daniel Lo Nigro",
+            githubUsername: "Daniel15"
+          },
+          text: "This is the first comment"
+        },
+        {
+          author: {
+            name: "Christopher Chedeau",
+            githubUsername: "vjeux"
+          },
+          text: "This is the second comment"
+        },
+        {
+          author: {
+            name: "Christoph Pojer",
+            githubUsername: "cpojer"
+          },
+          text: "This is the second comment"
+        }
+      ];
+
+      var CommentList = React.createClass({
+        propTypes: {
+          comments: React.PropTypes.array.isRequired
+        },
+
+        render() {
+          var self = this;
+          var commentNodes = this.props.comments.map(function(comment) {
+            return(
+              <li>
+                <img src={self.getPhotoUrl(comment.author)}
+                  alt={'Photo of ' + comment.author.name}
+                  width={50}
+                  height={50}
+                  className="commentPhoto" />
+                <strong>{comment.author.name}</strong>{': '}
+                {comment.text}
+              </li>
+            );
+          });
+
+          return (
+            <div className="comments">
+              <h1>Comments</h1>
+              <ul className="commentList">
+                {commentNodes}
+              </ul>
+            </div>
+          );
+        },
+
+        getPhotoUrl(author) {
+          return 'https://avatars.githubusercontent.com/' + author.githubUsername + '?s=50';
+        }
+      });
+
+      React.render(<CommentList comments={comments}/>, document.getElementById('content'));
+    </script>
+  </body>
+</html>
