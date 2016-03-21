@@ -1,13 +1,26 @@
 {
+  "content": [
+    "wwwroot",
+    "Views"
+  ],
   "version": "1.0.0-*",
   "compilationOptions": {
+    "preserveCompilationContext": true,
     "emitEntryPoint": true
   },
   "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0-rc2-23911"
+    "Microsoft.NETCore.App": "1.0.0-rc2-23911",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-*",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "System.Runtime.Serialization.Primitives": "4.1.0-*"
   },
   "frameworks": {
-    "netstandard1.5": {
+    "netstandardapp1.3": {
       "imports": [ "portable-net45+win8", "dnxcore50" ]
     }
   }
