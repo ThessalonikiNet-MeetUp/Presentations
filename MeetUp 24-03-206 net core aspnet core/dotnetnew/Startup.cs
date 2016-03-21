@@ -9,9 +9,16 @@ namespace ConsoleApplication
 {
     public class Startup {
         
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
+        }
+        
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) {
             
             loggerFactory.AddConsole(LogLevel.Debug);
+            
+            app.UseMvc();
             
             app.Run(context =>
             {
