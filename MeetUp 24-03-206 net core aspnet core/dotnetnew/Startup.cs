@@ -9,7 +9,9 @@ namespace ConsoleApplication
 {
     public class Startup {
         
-        public void Configure(IApplicationBuilder app) {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) {
+            
+            loggerFactory.AddConsole(LogLevel.Debug);
             
             app.Run(context =>
             {
