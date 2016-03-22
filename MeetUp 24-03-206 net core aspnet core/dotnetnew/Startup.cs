@@ -25,6 +25,8 @@ namespace ConsoleApplication
                 await next.Invoke();
                 logger.LogInformation("Finished handling request.");
             });
+            
+            app.UseMiddleware<ProcessingTimeMiddleware>();
 
             app.UseMvc();
             
