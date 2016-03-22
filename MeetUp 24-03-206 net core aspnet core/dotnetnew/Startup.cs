@@ -18,6 +18,14 @@ namespace ConsoleApplication
             
             loggerFactory.AddConsole(LogLevel.Debug);
             
+            var logger = loggerFactory.CreateLogger("Custom Logging");
+            app.Use(async (context, next) =>
+            {
+                logger.LogInformation("Handling request.");
+                await next.Invoke();
+                logger.LogInformation("Finished handling request.");
+            });
+
             app.UseMvc();
             
             app.Run(context =>
