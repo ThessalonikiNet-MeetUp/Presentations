@@ -9,7 +9,6 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0-rc2-23911",
     "Microsoft.Extensions.Logging.Console": "1.0.0-*",
     "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
     "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
@@ -21,6 +20,9 @@
   },
   "frameworks": {
     "netstandardapp1.3": {
+      "dependencies": {
+         "NETStandard.Library": "1.0.0-*"
+      },
       "imports": [ "dnxcore50", "portable-net45+win8" ]
     }
   }
