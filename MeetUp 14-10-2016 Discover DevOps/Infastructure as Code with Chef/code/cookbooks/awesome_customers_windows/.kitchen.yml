@@ -1,0 +1,26 @@
+---
+driver:
+  name: hyperv
+  parent_vhd_folder: C:\Hyper-V
+  parent_vhd_name: WindowsServer2012R2.vhdx
+  vm_switch: ExternalSwitch
+  memory_startup_bytes: 2GB
+
+provisioner:
+  name: chef_zero
+
+transport:
+  name: winrm
+  elevated: true
+  password: Aa1234
+
+platforms:
+  - name: windows-2012r2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[awesome_customers_windows::default]
+    attributes:
+      sql_server:
+        server_sa_password: 'SQL_sa_pa$$w0rd'

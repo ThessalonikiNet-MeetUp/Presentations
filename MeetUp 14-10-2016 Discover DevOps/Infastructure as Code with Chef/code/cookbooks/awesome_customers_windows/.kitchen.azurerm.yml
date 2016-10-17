@@ -1,0 +1,28 @@
+---
+driver:
+  name: azurerm
+
+driver_config:
+  subscription_id: "123abc-your-subscription-id-456def"
+  location: "West US"
+  machine_size: "Standard_D4"
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-2012r2
+    driver_config:
+      image_urn: MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest
+    transport:
+      name: winrm
+      username: azure
+
+suites:
+  - name: default
+    run_list:
+      - recipe[awesome_customers_windows::default]
+    attributes:
+      sql_server:
+        sysadmins: ['azure']
+        server_sa_password: 'SQL_sa_pa$$w0rd'
