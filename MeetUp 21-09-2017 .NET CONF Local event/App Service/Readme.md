@@ -1,6 +1,6 @@
-# Demos and presentation about Azure AppService, dotnet meetup, 21.9.2017 #
+# Demos and presentation about Azure AppService, Thessaloniki .NET Meetup, 21.9.2017 #
 
-I had an opportunity to talk at dotnet Greece meetup via Skype about Azure AppService. As part of presentation we went deep into AppService as such, focusing on:
+I had an opportunity to talk at Thessaloniki .NET Meetup via Skype about Azure AppService. As part of presentation we went deep into AppService as such, focusing on:
 
 1. [Azure WebApp](https://azure.microsoft.com/en-us/services/app-service/web/) - we discussed and look into specifics for hosting web application on Microsoft Paas solution on Windows platforms:
 	1. creation via portal, exploring settings, deployment options, kudu and [kuduexec.net](https://github.com/projectkudu/KuduExec.NET), AutoHeal, logistics and process explorer and going into bare REST with resource explorer
