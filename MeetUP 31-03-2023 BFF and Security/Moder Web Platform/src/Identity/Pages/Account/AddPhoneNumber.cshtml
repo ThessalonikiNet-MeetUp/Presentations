@@ -1,0 +1,22 @@
+@page
+@model Identity.Pages.Account.AddPhoneNumberModel
+@{
+    ViewData["Title"] = "Add your phone number";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Enter your phone number.</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="phone number" aria-required="true" placeholder="+1345386129" />
+                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Add phone number</button>
+        </form>
+    </div>
+</div>
