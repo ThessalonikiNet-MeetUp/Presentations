@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1 class="display-4">Logged In as @User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value</h1>
+
+        <form class="form-inline" asp-controller="Home" asp-action="DoWork">
+            <button type="submit" class="btn btn-primary">Do Work</button>
+        </form>
+    }
+    else
+    {
+        <h1 class="display-4">Not logged in</h1>
+    }
+
+</div>
