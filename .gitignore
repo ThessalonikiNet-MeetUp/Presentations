@@ -186,3 +186,7 @@ Desktop.ini
 $RECYCLE.BIN/
 *.mdf
 *.ldf
+
+.DS_Store
+.idea
+*.Development.json

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherInfo", "WeatherInfo\WeatherInfo.csproj", "{413A671A-2977-4AC3-9A1E-5EE78BD7E8FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{413A671A-2977-4AC3-9A1E-5EE78BD7E8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413A671A-2977-4AC3-9A1E-5EE78BD7E8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413A671A-2977-4AC3-9A1E-5EE78BD7E8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413A671A-2977-4AC3-9A1E-5EE78BD7E8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
