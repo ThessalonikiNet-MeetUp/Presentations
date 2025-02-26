@@ -21,7 +21,7 @@ public class WeatherInfoController(IWeatherService weatherService) : ControllerB
         {
             return Problem(title: e.Message, 
                 detail: $"Code: {e.Data["Code"]}", 
-                statusCode: (int)HttpStatusCode.InternalServerError);
+                statusCode: (int)HttpStatusCode.BadRequest);
         }
     }
 }

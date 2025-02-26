@@ -31,10 +31,6 @@ public class WeatherService(WeatherApiClient client, WeatherDbContext context) :
         }
         
         var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await response.Content.ReadAsStringAsync(), serializerOptions)!;
-        var errorData = new Dictionary<string, string>
-        {
-            { "Code", errorResponse.Error.Code.ToString() }
-        };
         throw new Exception(errorResponse.Error.Message){ Data = { { "Code", errorResponse.Error.Code } } };
     }
 }

@@ -34,3 +34,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+/// <summary>
+/// This is needed for integration tests to be able to use the Program class as a type parameter for WebApplicationFactory.
+/// </summary>
+public partial class Program { }
