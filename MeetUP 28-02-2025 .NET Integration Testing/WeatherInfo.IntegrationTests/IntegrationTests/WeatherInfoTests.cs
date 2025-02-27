@@ -28,7 +28,7 @@ public class WeatherInfoTests(CustomWebApplicationFactory factory) : IClassFixtu
     public async Task GetWeatherInfo_InvalidCity_Failure()
     {
         // Arrange
-        const string city = "asdmsadfasdfwroifsdafdaf";
+        const string city = CustomWebApplicationFactory.NotExistingCity;
         
         // Act
         var response = await _client.GetAsync($"weatherinfo?city={city}");
@@ -46,7 +46,7 @@ public class WeatherInfoTests(CustomWebApplicationFactory factory) : IClassFixtu
     public async Task GetWeatherInfo_ValidCity_Success()
     {
         // Arrange
-        const string city = "Thessaloniki";
+        const string city = CustomWebApplicationFactory.ExistingCity;
 
         // Act
         var response = await _client.GetAsync($"weatherinfo?city={city}");

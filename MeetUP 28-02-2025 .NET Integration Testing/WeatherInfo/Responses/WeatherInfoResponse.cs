@@ -3,7 +3,7 @@ namespace WeatherInfo.Responses;
 
 public record WeatherInfoResponse(Location Location, Details Current);
 
-public record Location(string Name, string Region, string Country, string TzId);
+public record Location(string Name, string Region, string Country);
 
 public record Details(double TempC, double TempF);
 

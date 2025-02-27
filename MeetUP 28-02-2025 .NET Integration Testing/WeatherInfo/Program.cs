@@ -11,7 +11,7 @@ builder.Services.AddDbContext<WeatherDbContext>(options =>
 builder.Services.AddHttpClient<WeatherApiClient>(
     client =>
     {
-        client.BaseAddress = new Uri($"http://api.weatherapi.com/v1/current.json");
+        client.BaseAddress = new Uri("http://api.weatherapi.com/v1/current.json");
     });
 builder.Services.AddTransient<IWeatherService, WeatherService>();
 builder.Services.AddControllers();
